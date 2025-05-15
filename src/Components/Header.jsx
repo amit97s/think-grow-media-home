@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import logo from "../assets/logo.png";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [visibleIndex, setVisibleIndex] = useState(0);
@@ -23,11 +23,16 @@ const Header = () => {
   return (
     <header className="w-full z-[100]">
       <div className="">
-        <div className="flex items-center justify-between h-[270px] bg-gradient-to-b from-[#3D2A8A] via-[#2D1B69] to-[#251455] backdrop-blur-sm px-8 rounded-none relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#2D1B69]/40 via-[#1A103F]/30 to-black/20 pointer-events-none"></div>
-          <div className="flex items-center h-full relative">
-            <h1 className="text-5xl font-bold text-[#F1F3F0] tracking-wider drop-shadow-lg">
-              ThinkGrow
+        <div className="flex items-center justify-between h-[270px] bg-gradient-to-b from-[#961B2F] via-[#961B2F] to-[#961B2F] backdrop-blur-sm px-8 rounded-none relative overflow-hidden">
+          <div className="flex items-center h-full relative gap-6">
+            <img
+              src={logo}
+              alt="ThinkGrow Logo"
+              className="h-20 w-auto md:h-24 lg:h-28 xl:h-32 object-contain transition-all duration-300"
+              style={{ minWidth: "60px" }}
+            />
+            <h1 className="text-4xl md:text-5xl font-bold text-[#F1F3F0] tracking-wider drop-shadow-lg flex flex-col justify-center">
+              ThinkGrow Media
               <div className="h-[40px] mt-4 relative overflow-hidden">
                 {services.map((service, index) => (
                   <span
@@ -46,7 +51,7 @@ const Header = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden bg-gradient-to-b from-[#1A103F] to-black rounded-b-lg">
+          <div className="md:hidden bg-gradient-to-b from-[#4A0404] to-black rounded-b-lg">
             <nav className="px-8 py-6">
               <ul className="space-y-6">
                 <li>

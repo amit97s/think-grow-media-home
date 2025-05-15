@@ -39,7 +39,7 @@ const testimonials = [
 
 const PeopleTalk = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-[#150D35] via-[#120B2E] to-[#0F0925] relative z-[1]">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-[#2F0E13] via-[#2F0E13] to-[#2F0E13] relative z-[1]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2 

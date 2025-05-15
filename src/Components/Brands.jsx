@@ -50,7 +50,7 @@ const Brands = () => {
     { value: 8, label: "Years of Expertise", description: "A decade of impactful results." },
   ];
   return (
-    <motion.div className="w-full bg-gradient-to-b from-[#251455] via-[#1A103F] to-[#150D35] py-24 relative z-[1]">
+    <motion.div className="w-full bg-gradient-to-b from-[#961B2F] to-[#961B2F] py-24 relative z-[1]">
       <motion.h2 className="text-4xl font-bold text-[#F1F3F0] text-center mb-16">
         Trusted by <span className="text-[#A6A7A3]">Leading Brands</span>
       </motion.h2>
@@ -58,12 +58,12 @@ const Brands = () => {
         <div className="overflow-hidden">
           <Slider {...settings}>
             {brandsLeft.map((item, index) => (
-              <div key={index} className="px-1.5"> {/* Adjust spacing */}
+              <div key={index} className="px-1.5"> 
                 <img
                   src={item}
                   alt="brand"
                   className="w-full h-48 object-cover rounded-2xl"
-                  style={{ marginRight: "10px" }} // Additional margin support
+                  style={{ marginRight: "10px" }} 
                 />
               </div>
             ))}
@@ -72,13 +72,12 @@ const Brands = () => {
         <div className="overflow-hidden">
           <Slider {...settings} rtl>
             {brandsRight.map((item, index) => (
-              <div key={index} className="px-1.5"> {/* Adjust spacing */}
+              <div key={index} className="px-1.5">
                 <img
                   src={item}
                   alt="brand"
                   className="w-full h-48 object-cover rounded-2xl"
-                  style={{ marginRight: "10px" }} // Additional margin support
-                />
+                  style={{ marginRight: "10px" }}                 />
               </div>
             ))}
           </Slider>

@@ -1,47 +1,52 @@
 import React from 'react'
-
+import exom from '../assets/ecom.jpg'
+import brands from '../assets/brands.jpg'
+import digitalm from '../assets/digitalm.jpg'
+import leads from '../assets/leads.jpg'
+import seo from '../assets/seo.jpg'
+import social from '../assets/social.jpg'
 const Cards = () => {
   const cards = [
     { 
       id: 1, 
       title: 'E-commerce', 
       content: 'Boost your online sales with our comprehensive e-commerce solutions.',
-      image: 'american.jpg'
+      image: exom
     },
     { 
       id: 2, 
       title: 'Digital Marketing', 
       content: 'Strategic digital marketing campaigns that drive results.',
-      image: 'must.jpg'
+      image: digitalm
     },
     { 
       id: 3, 
       title: 'SEO', 
       content: 'Improve your search rankings and online visibility.',
-      image: 'jwewlry1.jpg'
+      image: seo
     },
     { 
       id: 4, 
       title: 'Lead Generation', 
       content: 'Generate quality leads that convert into customers.',
-      image: 'gym.jpg'
+      image: leads
     },
     { 
       id: 5, 
       title: 'Social Media', 
       content: 'Engage your audience across all social platforms.',
-      image: 'kazo.jpg'
+      image: social
     },
     { 
       id: 6, 
       title: 'Branding', 
       content: 'Build a strong, memorable brand identity.',
-      image: 'angarkha.jpg'
+      image: brands
     },
   ]
 
   return (
-    <div className='container mx-auto px-4 py-8 bg-gradient-to-b from-[#2D1B69] via-[#2D1B69] to-[#251455]'>
+    <div className='container mx-auto px-4 py-8 bg-gradient-to-b from-[#961B2F] to-[#961B2F]'>
       <div className='grid grid-cols-3 gap-4'>
         {cards.map((card) => (
           <div 
@@ -49,7 +54,7 @@ const Cards = () => {
             className='relative min-h-[500px] group overflow-hidden rounded-lg transform perspective-1000'
           >
             <img 
-              src={`/src/assets/${card.image}`} 
+              src={`${card.image}`} 
               alt={card.title}
               className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110'
             />
@@ -57,7 +62,7 @@ const Cards = () => {
               <h3 className='text-3xl font-bold text-white'>{card.title}</h3>
             </div>
             <div 
-              className='absolute inset-0 bg-gradient-to-t from-[#3D2A8A] via-[#2D1B69] to-[#251455] opacity-0 group-hover:opacity-100 
+              className='absolute inset-0 bg-gradient-to-b from-[#961B2F] to-[#961B2F] opacity-0 group-hover:opacity-100 
                        transition-all duration-700 ease-out transform translate-y-full group-hover:translate-y-0 
                        [transform-style:preserve-3d] group-hover:[transform:rotateX(10deg)] 
                        before:content-[""] before:absolute before:inset-0 before:bg-black/20 
