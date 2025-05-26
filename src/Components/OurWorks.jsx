@@ -13,29 +13,32 @@ import eue from '../assets/eye.avif'
 import dl from '../assets/dl.avif'
 import dispatch from '../assets/dispatch.webp'
 import bleo from '../assets/bleo.webp'
+import vp from '../assets/vp.webp'
+import pintal from '../assets/pintal.svg'
 
 const OurWorks = () => {
   const [activeCategory, setActiveCategory] = useState('coding')
 
   const projects = {
     coding: [
-      { image: dispatch, title: 'Transportation' },
-      { image: tdc, title: 'Educational' },
-      { image: wt, title: 'Traveling' },
-      { image: prop, title: 'Property' },
+      { image: dispatch, title: 'Transportation' ,link:"https://dispatch.co.in/"},
+      { image: tdc, title: 'Educational' ,link:"https://www.thedesignersclass.com/"},
+      { image: wt, title: 'Traveling' ,link:"https://wafers.travel/"},
+      { image: prop, title: 'Property' ,link:'https://www.prophawk.com/login.php'},
+      { image: vp, title: 'Photography',link: 'https://vickypreet.com/'},
+      { image: pintal, title: 'AI',link:'https://scale.pintel.ai/login' },
     ],
     shopify: [
-      { image: bleo, title: 'Fashion Store' },
-      { image: dl, title: 'Lifestyle Brand' },
-      { image: eue, title: 'Lifestyle Brand' },
-      { image: leads, title: 'Lifestyle Brand' },
+      { image: bleo, title: 'E-commerce' ,link:"https://bleo.in/"},
+      { image: dl, title: 'Lifestyle Brand' ,link:"https://www.diogolouis.com/"},
+      { image: eue, title: 'Lifestyle Brand' ,link:"https://eyewoot.com/"},
     ],
     wordpress: [
-      { image: gg, title: 'Business Portfolio' },
-      { image: hindi, title: 'Sports Academy' },
-      { image: ll, title: 'Sports Academy' },
-      { image: indraprasth, title: 'Sports Academy' },
-      { image: maac, title: 'Sports Academy' },
+      { image: gg, title: 'Health Care',link:"https://galenaglobal.com/" },
+      { image: hindi, title: 'Retails' ,link:"https://thehindibazar.com/"},
+      { image: ll, title: 'Educational institution',link:"https://learnzlab.com/"},
+      { image: indraprasth, title: 'School',link:"https://indraprasthapublicschoolbaghpat.com/" },
+      { image: maac, title: 'Educational institution ' ,link:"https://www.maacindia.com/"},
     ]
   }
 
@@ -48,7 +51,7 @@ const OurWorks = () => {
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Our Works</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Our work</h2>
           <p className="text-red-200 text-lg max-w-2xl mx-auto">Explore our portfolio of successful projects that showcase our expertise and creativity</p>
         </div>
 
@@ -105,15 +108,15 @@ const OurWorks = () => {
                     {project.title}
                   </h3>
                   <div className="w-12 h-1 bg-[#961B2F] mt-2 mb-2 transform origin-left transition-all duration-300 group-hover:w-24"></div>
-                  <p className="text-red-200 text-sm opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-red-200 text-sm opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer">
                     View project details
-                  </p>
+                  </a>
                 </div>
                 
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
-                  <button className="px-6 py-2 bg-[#961B2F] text-white rounded-full transform scale-95 transition-transform duration-300 hover:scale-100 opacity-0 group-hover:opacity-100">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-[#961B2F] text-white rounded-full transform scale-95 transition-transform duration-300 hover:scale-100 opacity-0 group-hover:opacity-100">
                     View Details
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

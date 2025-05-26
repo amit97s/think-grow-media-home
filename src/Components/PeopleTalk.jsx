@@ -12,7 +12,7 @@ import south from'../assets/south.png'
 
 const testimonials = [
   {
-    name: "Shahil Arora",
+    name: "Shahil Malik",
     position: "Manager,Adsparxx",
     text: "Think Grow Media transformed our digital presence. Their team is incredibly skilled and professional!",
     image:shahil,
